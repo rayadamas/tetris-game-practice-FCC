@@ -216,7 +216,7 @@ function addScore() {
 
         if(row.every(index => squares[index].classList.contains('taken'))) {
             score+= 10;
-            scoreDisplay.innerHTML = score;
+            scoreDisplay.innerHTML = score; //app.js:219 Uncaught TypeError: Cannot set property 'innerHTML' of null
             row.forEach(index => {
                 squares[index].classList.remove('taken');
                 squares[index].classList.remove('tetromino');
